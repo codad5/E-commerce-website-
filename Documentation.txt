@@ -1,0 +1,60 @@
+Good day My fellow developer😊😊
+
+
+
+========== 
+part 1
+===========
+*to begin go to this directory {adsowner/sql.sql}
+*Then open the above project directory with any text/code editor
+*copy all the text(code) in the file
+*In your browser open ~localhost/phpmyadmin~
+*Click on New  
+*On the part with Create Database close to the top set the database Name as `jiji` [=> you will see the image of this in the directory  {doc-img/createdb.png} <=].
+*then click create
+
+ 
+
+=========
+part 2
+=========
+*IN the side menu of your phpmyadmin panel click the database you just created 
+*On the top menu click *SQL*
+*past the text already copied from {adsowner/sql.sql} in the text editor(text area) and click GO [=> you will see the image of this in the directory  {doc-img/pastesql.png} <=].
+*When done Copy/Move this folder [=> i.e this parent directory/folder of this file <=] {../AdsDemoSB} to {C:\xampp\htdocs\}
+
+
+=====================
+part 3 ^To test it^
+====================
+*Open a browser of your choice 
+*copy and paste this url ~localhost/AdsDemoSB~ to your browser url
+*then you can begin
+
+
+!!!!!!!!!!!!
+===========
+Note
+============
+!!!!!!!!!!
+
+* To style for Xtra big ads use this style class [=> XbigAds  <=] 
+* To style for big ads use this style class [=> bigAds  <=] 
+* To style for Medium ads use this style class [=> mediumAds  <=]
+* To style for small ads use this style class [=> smallAds  <=]
+* To style for Xsmall ads use this style class [=> Xsmall <=] 
+
+!!!* This style class can be changed on line of  `index.php` file of directory/folder {../AdsDemoSB/index.php}
+		where a switch case is use ..
+			you are to change the $style value (!only!) where is written as [=> $style = "sizeAds"; <=]
+
+in the later part of this the login page will be done in the  {../AdsDemoSB/adsowner/index.php} below the signup form
+
+
+you are allowed to change any style , tag , id , class, but (! Do not change the name of any input, select !)
+
+Thank you Nice working with you @paul_PTB
+
+call +2348089849241 or +2348142572488
+or our instagram @ridoxstudio
+or Facebook and twitter  @ridox studio

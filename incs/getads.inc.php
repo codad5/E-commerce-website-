@@ -1,10 +1,10 @@
 <?php
 
-   function adsExists($conn, $Adsid){
+ function adsExists($conn, $Adsid){
           $sql = "SELECT * FROM ads WHERE Adssn = ?;";
             $stmt = mysqli_stmt_init($conn);
             if (!mysqli_stmt_prepare($stmt, $sql)) {
-                header("location:../home.php?er2");
+                header("location:index");
                 exit();
             }
 

@@ -1,180 +1,126 @@
-:root{
-    --main-theme-color:rgba(56, 99, 216);
-    --main-text-color:rgb(245, 245, 245);
-}
-*{
-    margin:0;
-    padding: 0;
-    overflow-x: hidden;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'poppins', Arial, sans-serif;
-
-}
-
-head, section, body {
-    width: 100vw;
+.ModalBox{
+    
+    background: rgb(255, 255, 255);
     position: relative;
-
+    width: 85vw;
+    max-width: 500px;
+    height:500px;
+    /* z-index: 1000; */
+    display: none ;
+    z-index: 10000 !important;
+    transition: all 0.5 ease;
+    
 }
 
-aside{
-    position: relative;
+.center-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-header{
-    height: 30px;
+.XModalBox{
+    display: none;
+    place-items: center;
+    transition: all 0.5 ease;
+    background: rgba(126, 123, 123, 0.692);
+
+    
+}
+
+.modalCnt{
     width:100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height:100vh;
     position: fixed;
-    z-index: 100;
-}
-main{
-    top: 30px;
-    position: relative;
-}
+    /* display:grid ; */
+    place-items: center;
+    top:0;
+    transition: all 0.5 ease;
 
-.header-logo{
-    flex-basis: 25%;
-    max-width: 300px;
-    min-width: 100px;
-    height: 100%;
-    background: var(--main-theme-color);
-    text-align: center;
+    /* z-index: -1; */
 }
 
-nav{
-    flex-basis: 45%;
-    height: 100%;
-    display: flex;
-    justify-content: center     ;
-    align-items: center;
-    background: #fff;
-
-}
-nav a{
-    text-decoration: none;
-
-}
-.signav{
-    flex-basis:30%;
-}
-
-nav li{
-    display: inline-block;
-
-}
-
-.caresoul{
-    background:  var(--main-theme-color);
-    height: 300px;
-}
-
-.AdsMediumSection{
-    min-height:500px;
-    border-bottom: solid 10px var(--main-theme-color);
-
-}
-
-.AdsMediumSection .section-title{
-    width: 95%;
-     height:40px;
-    padding-right: 50px;
-    direction: rtl;
-
-}
-
-.AdsMediumSection .section-title span { 
-    display: inline-block;
-    height:100%;
-    background:var(--main-theme-color);
-    width:150px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: x-large;
-    color: var(--main-text-color);
-    text-transform: capitalize;
-
-}
-.AdsMediumSection .section-body {
-    height:90%;
+.modalshow{
+    margin:0px !important;
+    height:40% ;
     width:100%;
-    text-align: center;
-    
-}
-
-.mediumAds{
-    height:200px;
-    width:250px;
-    display: inline-block;
-    position: relative;
-    background: grey;
-    margin: 30px;
-    
-
-}
-
-.mediumAds .adsImg{
-    position:absolute;
-    width:100%;
-    height:100%;
-    /* background:rgba(178, 34, 34, 0.959); */
-    opacity: 0.8;
-}
-
-.mediumAds .adsImg img {
-    width:100%;
-    height:70%;
-    position: absolute;
-    left: 0;
     top: 0;
 }
 
-.mediumAds .adsWriteup{
+.modal-des{
+    /* position:absolute; */
+    height:20% !important;
+    width:100%;
+    top: 0;
+    font-size:large;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.modal-seller-details{
+    height:25%;
+    box-sizing: border-box;
+    padding: 0px 0px 10px 15px;
+    width:100%;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: medium;
+    flex-wrap: nowrap;
+
+}
+.seller-detail-modal{
+    width:45%;
+    height: 30%;
+    /* flex-shrink: 0; */
+    display:inline-block;
+    /* flex-basis: 25%; */
+    word-wrap: break-word;
+    /* height:100%; */
+    
+}
+.modal-full-bar{
+    width:100%;
+}
+.modal-Contact{
+    height:10%;
+    display: flex;
+    width:100%;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: medium;
+
+}
+
+.modalClosebtn{
+    position: absolute;
+    top:10px;
+    right:20px;
+    color:white;
+}
+
+.Display-none{
+    display:none;
+    z-index: 1000;
+}
+
+/* to style the shop */
+
+.shop-hero-cover,
+.top-sale {
+    width: 100vw;
+    height: 200px;
+    position:relative;
+
+    
+}
+.shop-hero-cover{
+    padding:5px;
+    box-sizing: border-box;
+}
+
+.shop-detail{
     position: absolute;
     bottom: 0;
-    background:rgb(215, 224, 218);
-    width: 100%;
+    left: 15px;
     height: 30%;
-    display:flex;
-    
-}
-
-
-.mediumAds .adsWriteup span{
-    height:100%;
-    flex-basis: 50%;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-
-
-}
-
-.mediumAds .adsWriteup span[class="price"] {
-    height: 100%;
-    flex-basis: 50%;
-    background:var(--main-theme-color);
-    color: antiquewhite;
-    text-align: center;
-    font-size: larger;
-    font-weight: 600;
-    display: flex;
-    
-
-}
-
-.mediumAds .adsWriteup span[class="name"] {
-    height: 100%;
-    flex-basis: 50%;
-    background:none;
-    color: var(--main-theme-color);
-    text-align: center;
-    font-size: larger;
-    font-weight: 300;
-    display: flex;
-
+    width:calc(100% - 15px);
 
 }

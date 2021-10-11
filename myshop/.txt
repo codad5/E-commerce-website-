@@ -1,0 +1,7 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME}  !-d
+
+RewriteCond %{REQUEST_FILENAME}\.php  -f
+
+RewriteRule ^login/([0-9a-zA-Z_-]+)/  index.php?error=$1 [NC,L]

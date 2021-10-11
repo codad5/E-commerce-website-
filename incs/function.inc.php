@@ -198,7 +198,29 @@ function uploadAds($conn, $adsName, $adsDes, $adsCat, $user){
       $sql = "SELECT * FROM users WHERE userName = '".$Adsowner."'";
       $result = mysqli_query($conn, $sql);
       $resultData = mysqli_fetch_assoc($result);
-      return $resultData;
+      mysqli_num_rows($result);
+      if (mysqli_num_rows($result) > 0) {
+        # code...
+        return $resultData;
+      }
+      else{
+        return false;
+      }
+      
+    }
+
+    function getTags($test){
+     
+      $fileExt = explode(' ', $test);
+
+      for ($i=0; $i < count($fileExt); $i++) { 
+          # code...
+          if ($fileExt[$i] !== "") {
+            # code...
+          echo "<a href='search.php?search_word=".$fileExt[$i]."'> #".$fileExt[$i]."  .  </a> ";
+
+          }
+      }
     }
 
      

@@ -1,5 +1,7 @@
 @media screen and (max-width:768px){
-    header .header-login{
-        display: none;
+    .modalshow{
+        height:25% !important;
     }
-}
+    .modal-seller-details{
+        height:35%  !important;
+    }

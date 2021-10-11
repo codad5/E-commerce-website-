@@ -1,0 +1,47 @@
+# mod_rewrite starts here 
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME}  !-d
+
+RewriteCond %{REQUEST_FILENAME}\.php  -f
+
+RewriteRule ^show/([0-9a-zA-Z_-]+).([0-9a-zA-Z_-]+)  show.php?prdid=$1.$2 [NC,L]
+
+RewriteCond %{REQUEST_FILENAME}  !-d
+
+RewriteCond %{REQUEST_FILENAME}\.php  -f
+
+RewriteRule ^show/  show.php?prdid=nonenn [NC,L]
+
+RewriteCond %{REQUEST_FILENAME}  !-d
+
+RewriteCond %{REQUEST_FILENAME}\.php  -f
+
+RewriteRule ^shop/([0-9a-zA-Z_-]+)  shop.php?shop=$1 [NC,L]
+
+RewriteCond %{REQUEST_FILENAME}  !-d
+
+RewriteCond %{REQUEST_FILENAME}\.php  -f
+
+RewriteRule ^shop/  shop.php?shop=uty [NC,L]
+
+RewriteCond %{REQUEST_FILENAME}  !-d
+
+RewriteCond %{REQUEST_FILENAME}\.php  -f
+
+RewriteRule ^myshop/login/([0-9a-zA-Z_-]+)  adsowner/index.php?error=$1 [NC,L]
+
+# does not apply to existing directories
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#if file not in server dont go ahead 
+
+RewriteCond %{REQUEST_FILENAME}\.php -f
+
+#HEre is to show the page with .php extension
+
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+
